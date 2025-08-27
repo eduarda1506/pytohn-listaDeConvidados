@@ -1,7 +1,16 @@
-convidados_da_festa = ['Ana', 'Diego', 'Yuliany']
+convidados_da_festa = ['Maria', 'João', 'Ana', 'Carlos', 'Mariana']
 
 status_presenca = {}
 
-# lista de pessoas que tentaram entrar
-lista_de_chegadas = ['Ana', 'Diego']
+print('--- Verificação da Lista de Convidados ---')
 
+lista_de_chegadas = ['João', 'Ana', 'Pedro', 'Maria']
+
+for pessoa in lista_de_chegadas:
+    if pessoa in convidados_da_festa:
+        print(f'Olá,{pessoa}! Bem-vindo(a) á festa.')
+        status_presenca[pessoa] = 'Confirmado'
+    
+    else:
+        print(f'Desculpe,{pessoa}.Seu nome não está na lista')
+        status_presenca[pessoa] = 'Não convidado'
